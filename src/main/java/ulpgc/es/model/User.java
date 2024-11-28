@@ -2,7 +2,7 @@ package ulpgc.es.model;
 
 public class User {
 
-    public enum Gender{Male, Felame}
+    public enum Gender{Male, Female}
     private final String name;
     private final String surname;
     private final String email;

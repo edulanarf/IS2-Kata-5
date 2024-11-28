@@ -4,7 +4,7 @@ public class RandomUserMe {
     private Name name;
     private String email;
     private String gender;
-    private Picture photo;
+    private Picture picture;
 
     public Name getName() {
         return name;
@@ -19,7 +19,7 @@ public class RandomUserMe {
     }
 
     public Picture getPicture() {
-        return photo;
+        return picture;
     }
 
     public record Name(String title, String first, String last){}

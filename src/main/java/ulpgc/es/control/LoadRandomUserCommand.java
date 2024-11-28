@@ -27,4 +27,8 @@ public class LoadRandomUserCommand implements Command{
             }
         }
     }
+
+    public List<User> getUsers() {
+        return users;
+    }
 }
