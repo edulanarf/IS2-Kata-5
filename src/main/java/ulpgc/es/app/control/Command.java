@@ -1,4 +1,4 @@
-package ulpgc.es.control;
+package ulpgc.es.app.control;
 
 import java.io.IOException;
 

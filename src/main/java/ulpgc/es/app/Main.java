@@ -1,7 +1,7 @@
-package ulpgc.es;
+package ulpgc.es.app;
 
-import ulpgc.es.control.LoadRandomUserCommand;
-import ulpgc.es.model.User;
+import ulpgc.es.app.control.LoadRandomUserCommand;
+import ulpgc.es.app.model.User;
 
 import java.io.IOException;
 

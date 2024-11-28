@@ -1,9 +1,9 @@
-package ulpgc.es.control;
+package ulpgc.es.app.control;
 
 import com.google.gson.Gson;
 import org.jsoup.Jsoup;
-import ulpgc.es.control.Pojo.RandomUserMeResponse;
-import ulpgc.es.model.User;
+import ulpgc.es.app.control.Pojo.RandomUserMeResponse;
+import ulpgc.es.app.model.User;
 
 import java.io.IOException;
 

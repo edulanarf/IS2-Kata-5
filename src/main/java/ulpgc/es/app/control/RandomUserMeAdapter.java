@@ -1,8 +1,8 @@
-package ulpgc.es.control;
+package ulpgc.es.app.control;
 
-import ulpgc.es.control.Pojo.RandomUserMe;
-import ulpgc.es.control.Pojo.RandomUserMeResponse;
-import ulpgc.es.model.User;
+import ulpgc.es.app.control.Pojo.RandomUserMe;
+import ulpgc.es.app.control.Pojo.RandomUserMeResponse;
+import ulpgc.es.app.model.User;
 
 import java.io.IOException;
 import java.net.URI;

@@ -1,4 +1,4 @@
-package ulpgc.es.control.Pojo;
+package ulpgc.es.app.control.Pojo;
 
 import java.util.List;
 

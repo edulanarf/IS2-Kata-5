@@ -1,4 +1,4 @@
-package ulpgc.es.control.Pojo;
+package ulpgc.es.app.control.Pojo;
 
 public class RandomUserMe {
     private Name name;

@@ -1,6 +1,6 @@
-package ulpgc.es.control;
+package ulpgc.es.app.control;
 
-import ulpgc.es.model.User;
+import ulpgc.es.app.model.User;
 
 import java.io.IOException;
 import java.util.ArrayList;

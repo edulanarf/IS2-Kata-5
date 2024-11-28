@@ -1,4 +1,4 @@
-package ulpgc.es.model;
+package ulpgc.es.app.model;
 
 public class User {
 
