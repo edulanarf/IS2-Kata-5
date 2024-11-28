@@ -16,17 +16,13 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        LoadRandomUserCommand command = new LoadRandomUserCommand(10);
+        LoadRandomUserCommand command = new LoadRandomUserCommand(100);
         command.execute();
-        for(User user: command.getUsers()){
-            System.out.println(user.getName());
-        }
-
-        List<User> user = command.getUsers();
+        List<User> users = command.getUsers();
         try {
-            ImageDeserializer deserializer = new ByteImageDeserializer(user.get(0).getPhoto());
-            BufferedImage image = deserializer.deserialize();
-            MainFrame mainFrame = new MainFrame(image);
+            ImageDeserializer deserializer = new ByteImageDeserializer(users);
+            List<BufferedImage> images = deserializer.deserialize();
+            MainFrame mainFrame = new MainFrame(images);
             mainFrame.setVisible(true);
 
         } catch (Exception e) {

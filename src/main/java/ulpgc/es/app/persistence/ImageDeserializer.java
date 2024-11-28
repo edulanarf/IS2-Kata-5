@@ -2,7 +2,8 @@ package ulpgc.es.app.persistence;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.List;
 
 public interface ImageDeserializer {
-    BufferedImage deserialize() throws IOException;
+    List<BufferedImage> deserialize() throws IOException;
 }
