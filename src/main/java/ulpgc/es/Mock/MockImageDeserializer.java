@@ -2,7 +2,8 @@ package ulpgc.es.Mock;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.List;
 
 public interface MockImageDeserializer {
-    BufferedImage deserialize() throws IOException;
+    List<BufferedImage> deserialize() throws IOException;
 }

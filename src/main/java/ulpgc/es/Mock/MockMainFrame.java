@@ -3,25 +3,69 @@ package ulpgc.es.Mock;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.util.List;
 
 public class MockMainFrame extends JFrame {
-    private BufferedImage image;
-    public MockMainFrame(BufferedImage image){
-        this.image = image;
+    private final List<BufferedImage> images;
+    private JLabel imageLabel;
+    private int currentIndex = 0;
 
-        this.setTitle("Money Calculator");
+    public MockMainFrame(List<BufferedImage> images){
+        this.images = images;
+        this.setTitle("Fotos Random");
         this.setSize(800,800);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setLocationRelativeTo(null);                       //En el centro de la pantalla
+        this.setLocationRelativeTo(null);
 
         this.setLayout(new BorderLayout());
-        JLabel label = new JLabel(new ImageIcon(image));
-        this.add(label);
 
-        // 4. Ajustar el tamaño del JFrame y hacerlo visible
+        imageLabel = new JLabel();
+        updateImage();
+
+        add(imageLabel, BorderLayout.CENTER);
+
+        JPanel buttonPanel = new JPanel();
+        JButton previousButton = new JButton("Anterior");
+        JButton nextButton = new JButton("Siguiente");
+
+        previousButton.addActionListener(e -> showPreviousImage());
+
+        nextButton.addActionListener(e -> showNextImage());
+
+        buttonPanel.add(previousButton);
+        buttonPanel.add(nextButton);
+        add(buttonPanel, BorderLayout.SOUTH);
+
         this.pack();
-        this.setLocationRelativeTo(null); // Centrar en pantalla
+        this.setLocationRelativeTo(null);
         this.setVisible(true);
 
+    }
+
+    private void updateImage() {
+        BufferedImage currentImage = images.get(currentIndex);
+        ImageIcon imageIcon = new ImageIcon(currentImage);
+
+        imageLabel.setIcon(imageIcon);
+        revalidate();
+        repaint();
+    }
+
+    private void showNextImage() {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = images.size() - 1;
+        }
+        updateImage();
+    }
+
+    private void showPreviousImage() {
+        if (currentIndex < images.size() - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0;
+        }
+        updateImage();
     }
 }
