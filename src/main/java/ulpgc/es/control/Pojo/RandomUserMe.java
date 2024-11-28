@@ -1,24 +1,24 @@
 package ulpgc.es.control.Pojo;
 
 public class RandomUserMe {
-    private final String name;
-    private final String surname;
-    private final String email;
-    private byte[] photo;
+    private Name name;
+    private String email;
+    private String gender;
+    private Picture photo;
 
-    public String getName() {
+    public Name getName() {
         return name;
-    }
-
-    public String getSurname() {
-        return surname;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public byte[] getPhoto() {
+    public String getGender() {
+        return gender;
+    }
+
+    public Picture getPicture() {
         return photo;
     }
 
